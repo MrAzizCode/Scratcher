@@ -1,0 +1,37 @@
+--- a/Ghidra/Features/Decompiler/src/decompile/cpp/funcdata.hh
++++ b/Ghidra/Features/Decompiler/src/decompile/cpp/funcdata.hh
+@@ -137,8 +137,9 @@
+ public:
+   Funcdata(const string &nm,const string &disp,Scope *conf,const Address &addr,FunctionSymbol *sym,int4 sz=0);	///< Constructor
+   ~Funcdata(void);							///< Destructor
+-  const string &getName(void) const { return name; }			///< Get the function's local symbol name
+-  const string &getDisplayName(void) const { return displayName; }	///< Get the name to display in output
++  // Scratcher modification: reflect edits to an existing function symbol.
++  const string &getName(void) const { return functionSymbol ? functionSymbol->getName() : name; }
++  const string &getDisplayName(void) const { return functionSymbol ? functionSymbol->getDisplayName() : displayName; }
+   const Address &getAddress(void) const { return baseaddr; }		///< Get the entry point address
+   int4 getSize(void) const { return size; }				///< Get the function body size in bytes
+   Architecture *getArch(void) const { return glb; }			///< Get the program/architecture owning \b this function
+--- a/Ghidra/Features/Decompiler/src/decompile/cpp/sleigh_arch.hh
++++ b/Ghidra/Features/Decompiler/src/decompile/cpp/sleigh_arch.hh
+@@ -114,6 +114,8 @@
+   static void loadLanguageDescription(const string &specfile,ostream &errs);
+   bool isTranslateReused(void);				///< Test if last Translate object can be reused
+ protected:
++  // Scratcher modification: derived applications can own a private translator.
++  bool ownsTranslator = false;
+   ostream *errorstream;					///< Error stream associated with \b this SleighArchitecture
+   // buildLoader must be filled in by derived class
+   static void collectSpecFiles(ostream &errs);		///< Gather specification files in normal locations
+--- a/Ghidra/Features/Decompiler/src/decompile/cpp/sleigh_arch.cc
++++ b/Ghidra/Features/Decompiler/src/decompile/cpp/sleigh_arch.cc
+@@ -152,7 +152,8 @@
+ SleighArchitecture::~SleighArchitecture(void)
+ 
+ {
+-  translate = (const Translate *)0;
++  // Scratcher modification: let Architecture release privately owned translators.
++  if (!ownsTranslator) translate = (const Translate *)0;
+ }
+ 
+ string SleighArchitecture::getDescription(void) const

@@ -1,0 +1,25 @@
+{
+  "scratcher_signatures": 1,
+  "signatures": [
+    {
+      "id": "gcc-pic-bx",
+      "name": "__x86.get_pc_thunk.bx",
+      "library": "GCC-compatible PIC runtime thunk",
+      "architecture": "x86",
+      "pattern": "8B 1C 24 C3",
+      "exact_length": true,
+      "source": "https://android.googlesource.com/platform/bionic/+/refs/heads/main/libc/arch-x86/bionic/__x86.get_pc_thunk.S",
+      "description": "Small architectural pattern; identical user code can collide. Candidate evidence only."
+    },
+    {
+      "id": "gcc-pic-cx",
+      "name": "__x86.get_pc_thunk.cx",
+      "library": "GCC-compatible PIC runtime thunk",
+      "architecture": "x86",
+      "pattern": "8B 0C 24 C3",
+      "exact_length": true,
+      "source": "https://android.googlesource.com/platform/bionic/+/refs/heads/main/libc/arch-x86/bionic/__x86.get_pc_thunk.S",
+      "description": "Small architectural pattern; identical user code can collide. Candidate evidence only."
+    }
+  ]
+}

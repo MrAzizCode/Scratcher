@@ -1,0 +1,37 @@
+{
+  "ghidra": "8b6bbb857accdfa20dc5b2f5dea471178c2e9fbc",
+  "imgui": "778992face67ecefaa5c2932db4b2101545ea4df",
+  "zlib": "51b7f2abdade71cd9bb0e7a373ef2610ec6f9daf",
+  "json": "v3.12.0",
+  "ghidra_sha256": "ddac49f903da9d5bac833e5cc79395098b9c33cfd3279be5f31bd00387d2d4db",
+  "zydis": "a2278f1d254e492f6a6b39f6cb5d1f5d515659dc",
+  "zycore": "0b2432ced0884fd152b471d97ecf0258ff4d859f",
+  "capstone_tag": "5.0.6",
+  "lua_version": "5.5.1",
+  "lua_archive_sha256": "1c4b4068d67061f2a2231ad2b5422e77acea1487ea9890f6320af614f4373dce",
+  "ghidra_modified_files": [
+    {
+      "path": "Ghidra/Features/Decompiler/src/decompile/cpp/funcdata.hh",
+      "upstream_sha256_lf": "10296e27a8d5ca375f81e9ea8358a67fe8e62b60de4922e60464965c56d918ab",
+      "modified_sha256_lf": "49c44e9430da73c8b0393044283d8f9543541f6e1905e8f993fb29e35504ed95"
+    },
+    {
+      "path": "Ghidra/Features/Decompiler/src/decompile/cpp/sleigh_arch.hh",
+      "upstream_sha256_lf": "bd583dc204224f85d373158196e29d6a9834ebca2835dab6388244db8077f992",
+      "modified_sha256_lf": "323b1ea5ee411ea9aaf9497d985a026bf6d888da446ad3db66bb737dad78eb48"
+    },
+    {
+      "path": "Ghidra/Features/Decompiler/src/decompile/cpp/sleigh_arch.cc",
+      "upstream_sha256_lf": "28f77e662b2cb394745844abff5e1ed8377816a07fc2ea614ab5e0dba092ff8a",
+      "modified_sha256_lf": "a33f13b8b7456df6bcfbd3de845b2ff0a217134099b59a94c183cb636f2e8809"
+    }
+  ],
+  "local_file_sha256": {
+    "vendor/json/json.hpp": "aaf127c04cb31c406e5b04a63f1ae89369fccde6d8fa7cdda1ed4f32dfc5de63",
+    "vendor/json/LICENSE.MIT": "46a65cffd1ea955132d95a8dd921640714a8d6b537d2e4e482d31145ae95b603",
+    "vendor/capstone/CMakeLists.txt": "051ee841fa485a3a1e0796f248762540ceeeef27cd86b1fa44a054e8d8dd8d98",
+    "vendor/capstone/LICENSE.TXT": "65e9ed46a59976eda8f5bd1ea79a680dea38dd299c760bc9a8d87a764ef5029b",
+    "vendor/lua/src/lua.h": "5e00319e803893f4310b1206394c80b82f03f42609b40ceb306d92a6740d828e",
+    "vendor/lua/LICENSE.txt": "0df9f5b648a59a404a740270bd3ce213580cfcdd97c5132815b21eca564b43df"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "packages": [
+    {
+      "name": "nvidia-cuda-nvrtc-cu12",
+      "version": "12.4.127",
+      "wheel": {
+        "filename": "nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/7c/30/8c844bfb770f045bcd8b2c83455c5afb45983e1a8abf0c4e5297b481b6a5/nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-win_amd64.whl",
+        "sha256": "a961b2f1d5f17b14867c619ceb99ef6fcec12e46612711bcec78eb05068a60ec"
+      }
+    },
+    {
+      "name": "nvidia-cuda-runtime-cu12",
+      "version": "12.4.127",
+      "wheel": {
+        "filename": "nvidia_cuda_runtime_cu12-12.4.127-py3-none-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/a8/8b/450e93fab75d85a69b50ea2d5fdd4ff44541e0138db16f9cd90123ef4de4/nvidia_cuda_runtime_cu12-12.4.127-py3-none-win_amd64.whl",
+        "sha256": "09c2e35f48359752dfa822c09918211844a3d93c100a715d79b59591130c5e1e"
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "nvidia/cuda_runtime/include/cuda.h",
+      "sha256": "e92376169061ab3f7ec1d2a758de3f477ab5f3e6ae3baee075c069f9c1224a91"
+    },
+    {
+      "path": "nvidia/cuda_nvrtc/include/nvrtc.h",
+      "sha256": "faabea0ae2fa125dec43de59c4f853388c026650d500b6671815f5754aec5292"
+    },
+    {
+      "path": "nvidia/cuda_nvrtc/bin/nvrtc64_120_0.dll",
+      "sha256": "3aa3cd8aa10437e212760c0e1ed730807811ec3bc330216dbfde4b26211d2243"
+    },
+    {
+      "path": "nvidia/cuda_nvrtc/bin/nvrtc-builtins64_124.dll",
+      "sha256": "79888dba26c51475ea21fc7b47d2b9dd5b1ffaecc8e5ea22a49fa5f5a722eb43"
+    }
+  ]
+}
